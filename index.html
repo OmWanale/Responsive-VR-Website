@@ -13,9 +13,6 @@
 </head>
 
 <body>
-    <div id="splash-screen">
-        <div class="splash-text">VR Website Loading...</div>
-    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#Home">
@@ -384,17 +381,6 @@
                     new bootstrap.Collapse(navbarCollapse).hide();
                 }
             });
-        });
-    </script>
-    <script>
-        window.addEventListener('load', () => {
-            const splash = document.getElementById('splash-screen');
-            setTimeout(() => {
-                splash.style.opacity = '0';
-                setTimeout(() => {
-                    splash.style.display = 'none';
-                }, 1000); // match with CSS transition
-            }, 3000); // 3 second delay before fade out
         });
     </script>
 </body>
