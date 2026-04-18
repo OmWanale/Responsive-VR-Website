@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#Home">
-                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-logo-img.png" class="vr-logo" />
+                <img src="https://picsum.photos/seed/vr-logo-2026/120/80" class="vr-logo" alt="VR brand logo" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,6 +29,7 @@
                     <a class="nav-link" href="#Recent-Blogs-section" id="navItem3">Recent Blogs</a>
                     <a class="nav-link" href="#Contact-Us-Section" id="navItem4">Contact Us</a>
                 </div>
+                <button class="btn btn-outline-primary btn-sm mt-3 mt-lg-0 ml-lg-3" id="themeToggleBtn" type="button">Dark Mode</button>
             </div>
         </div>
     </nav>
@@ -48,7 +49,14 @@
                     <div class="col-12">
                         <h1 class="products-section-heading pb-2">Products</h1>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 mb-3">
+                        <div class="filter-toolbar" id="productFilterToolbar">
+                            <button class="filter-chip active" type="button" data-filter="all">All Products</button>
+                            <button class="filter-chip" type="button" data-filter="headset">Headset</button>
+                            <button class="filter-chip" type="button" data-filter="bundle">Headset + Controllers</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 product-item" data-product="headset">
                         <div class="product-card vr-headset-bg-container d-flex flex-column justify-content-end p-3 mb-3">
                             <h1 class="product-card-title">VR Headset</h1>
                             <p class="product-card-price">Rs 74,810</p>
@@ -57,7 +65,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 product-item" data-product="bundle">
                         <div class="product-card touch-controller-bg-container d-flex flex-column justify-content-end p-3 mb-3">
                             <h1 class="product-card-title">VR Headset and Two Touch Controllers</h1>
                             <p class="product-card-price">Rs 97,490</p>
@@ -85,7 +93,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/easy-connect-img.png" class="vr-features-card-image" />
+                            <img src="https://picsum.photos/seed/feature-connect-2026/96/96" class="vr-features-card-image" alt="Easy connect feature" />
                             <h1 class="vr-features-card-title mt-3">Easy to connect</h1>
                             <p class="vr-features-card-description">
                                 Instead of viewing a screen in front of them, users are immersed and able to interact with 3D worlds.
@@ -94,7 +102,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-capability-img.png" class="vr-features-card-image" />
+                            <img src="https://picsum.photos/seed/feature-vr-capability-2026/96/96" class="vr-features-card-image" alt="VR capability feature" />
                             <h1 class="vr-features-card-title mt-3">VR Capability</h1>
                             <p class="vr-features-card-description">
                                 Virtual reality (VR) can create an environment similar to or completely different from the real world.
@@ -103,7 +111,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/video-games-img.png" class="vr-features-card-image" />
+                            <img src="https://picsum.photos/seed/feature-games-2026/96/96" class="vr-features-card-image" alt="Gaming feature" />
                             <h1 class="vr-features-card-title mt-3">Video games</h1>
                             <p class="vr-features-card-description">
                                 Ability to recognize hand motion, evolving interactions and gameplay in VR.
@@ -112,7 +120,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/interaction-img.png" class="vr-features-card-image" />
+                            <img src="https://picsum.photos/seed/feature-interaction-2026/96/96" class="vr-features-card-image" alt="Interaction feature" />
                             <h1 class="vr-features-card-title mt-3">Interaction</h1>
                             <p class="vr-features-card-description">
                                 Interaction refers to the <span class="interaction">natural interaction</span> between the user and the virtual scene.
@@ -121,7 +129,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/easy-play-img.png" class="vr-features-card-image" />
+                            <img src="https://picsum.photos/seed/feature-play-2026/96/96" class="vr-features-card-image" alt="Easy play feature" />
                             <h1 class="vr-features-card-title mt-3">Easy to play</h1>
                             <p class="vr-features-card-description">
                                 In 360-degree video, the locations of viewers are fixed, viewers are limited to the angles captured by the cameras.
@@ -130,7 +138,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/experience-img.png" class="vr-features-card-image" />
+                            <img src="https://picsum.photos/seed/feature-experience-2026/96/96" class="vr-features-card-image" alt="Experience feature" />
                             <h1 class="vr-features-card-title mt-3">Awesome Experience</h1>
                             <p class="vr-features-card-description">
                                 Virtual reality (VR) is a simulated experience that can be similar to or completely different from the real world.
@@ -151,7 +159,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-kit-1-img.png" class="vr-kit-card-image" />
+                            <img src="https://picsum.photos/seed/vr-kit-controller-2026/500/620" class="vr-kit-card-image" alt="Two touch controllers" />
                             <h1 class="vr-kit-card-title mt-3">
                                 Two Touch Controllers
                             </h1>
@@ -159,13 +167,13 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-kit-2-img.png" class="vr-kit-card-image" />
+                            <img src="https://picsum.photos/seed/vr-kit-headset-2026/500/620" class="vr-kit-card-image" alt="VR headset" />
                             <h1 class="vr-kit-card-title mt-3">VR Headset</h1>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="p-3 mb-3 text-center">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-kit-3-img.png" class="vr-kit-card-image" />
+                            <img src="https://picsum.photos/seed/vr-kit-cable-2026/500/620" class="vr-kit-card-image" alt="Charging cable" />
                             <h1 class="vr-kit-card-title mt-3">
                                 Charging Cable
                             </h1>
@@ -181,7 +189,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 order-1 order-md-2">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-optics-img.png" class="optics-and-controllers-section-image" />
+                        <img src="https://picsum.photos/seed/vr-optics-2026/1000/680" class="optics-and-controllers-section-image" alt="Improved optics" />
                     </div>
                     <div class="col-12 col-md-6 d-flex flex-column justify-content-center order-2 order-md-1 mb-5">
                         <h1 class="optics-and-controllers-section-heading">
@@ -196,7 +204,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-controllers-img.png" class="optics-and-controllers-section-image" />
+                        <img src="https://picsum.photos/seed/vr-controllers-2026/1000/680" class="optics-and-controllers-section-image" alt="Two touch controllers" />
                     </div>
                     <div class="col-12 col-md-6 d-flex flex-column justify-content-center mb-5">
                         <h1 class="optics-and-controllers-section-heading">
@@ -221,9 +229,15 @@
                     <div class="col-12">
                         <h1 class="trending-blogs-section-heading pb-2">Trending Blogs</h1>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-8 mb-3">
+                        <input type="search" class="form-control blog-search-input" id="blogSearchInput" placeholder="Search blogs (e.g. virtual reality, gaming, experience)" />
+                    </div>
+                    <div class="col-12 col-md-4 mb-3 d-flex align-items-center justify-content-md-end">
+                        <span class="blog-search-result" id="blogSearchResult">2 blogs available</span>
+                    </div>
+                    <div class="col-12 col-md-6 blog-item">
                         <div class="shadow mb-3">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-trending-blogs-1-img.png" class="w-100" />
+                            <img src="https://picsum.photos/seed/vr-blog-amazon-2026/900/450" class="w-100" alt="VR blog visual one" />
                             <div class="p-3">
                                 <h1 class="trending-blogs-card-title">Amazon</h1>
                                 <p class="trending-blogs-card-description">
@@ -239,9 +253,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 blog-item">
                         <div class="shadow mb-3">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-trending-blogs-2-img.png" class="w-100" />
+                            <img src="https://picsum.photos/seed/vr-blog-ads-2026/900/450" class="w-100" alt="VR blog visual two" />
                             <div class="p-3">
                                 <h1 class="trending-blogs-card-title">Advertising</h1>
                                 <p class="trending-blogs-card-description">
@@ -256,6 +270,9 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-12 d-none" id="blogEmptyState">
+                        <p class="text-muted font-weight-bold">No blogs match your search right now.</p>
                     </div>
                     <div class="col-12 d-flex flex-row justify-content-end">
                         <button class="view-all-button">View All</button>
@@ -274,7 +291,7 @@
                             Virtually Anything is Possible
                         </h1>
                         <div class="d-md-none">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-set-img.png" class="contact-us-section-image" />
+                            <img src="https://picsum.photos/seed/vr-contact-set-2026/700/700" class="contact-us-section-image" alt="VR contact visual" />
                         </div>
                         <div>
                             <a href="#vr-footer-section">
@@ -283,7 +300,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-5 d-none d-md-block order-2 order-md-1">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-set-img.png" class="contact-us-section-image p-5" />
+                        <img src="https://picsum.photos/seed/vr-contact-set-2026/700/700" class="contact-us-section-image p-5" alt="VR contact visual" />
                     </div>
                 </div>
             </div>
@@ -296,7 +313,7 @@
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <div class="text-center text-md-left">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-logo-img.png" class="vr-logo" />
+                            <img src="https://picsum.photos/seed/vr-logo-2026/120/80" class="vr-logo" alt="VR brand logo" />
                             <div class="d-flex flex-row justify-content-center justify-content-md-start mt-3 mb-3">
                                 <div class="vr-footer-section-icon-container">
                                     <a href="https://www.google.co.in/" target="_blank">
@@ -368,19 +385,9 @@
         </div>
     </div>
 
-    <script>
-        // Select all links inside the collapsible navbar
-        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                // Only close if the collapse is open
-                if (navbarCollapse.classList.contains('show')) {
-                    // Use Bootstrap's collapse method to hide it
-                    new bootstrap.Collapse(navbarCollapse).hide();
-                }
-            });
-        });
-    </script>
+    <button id="backToTopBtn" class="back-to-top-btn" type="button" aria-label="Back to top">Top</button>
+
+    <script src="vr-script.js"></script>
 </body>
 
 </html>

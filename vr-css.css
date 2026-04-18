@@ -4,6 +4,20 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --page-bg: #ffffff;
+    --surface-bg: #ffffff;
+    --text-main: #1f2933;
+    --muted-text: #7b8794;
+    --accent: #1754a1;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .vr-logo {
     width: 56px;
     height: 36px;
@@ -30,9 +44,10 @@ html {
 }
 
 .banner-section-bg-container {
-    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-banner-bg.png");
+    background-image: url("https://picsum.photos/seed/vr-banner-2026/1920/1080");
     height: 100vh;
     background-size: cover;
+    background-position: center;
 }
 
 .banner-heading {
@@ -64,10 +79,26 @@ html {
 .product-card {
     width: 100%;
     height: 600px;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.12));
+}
+
+.product-card>* {
+    position: relative;
+    z-index: 1;
 }
 
 .vr-headset-bg-container {
-    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-products-headset-img.png");
+    background-image: url("https://picsum.photos/seed/vr-product-headset-2026/1200/1600");
     background-size: cover;
 }
 
@@ -100,8 +131,40 @@ html {
 }
 
 .touch-controller-bg-container {
-    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/vr-products-headset-with-controllers-img.png");
+    background-image: url("https://picsum.photos/seed/vr-product-bundle-2026/1200/1600");
     background-size: cover;
+}
+
+.filter-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-chip {
+    border: 1px solid #d8dee9;
+    background-color: #ffffff;
+    color: #1f2933;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+    background-color: #f2f6fb;
+}
+
+.filter-chip.active {
+    background-color: #1754a1;
+    border-color: #1754a1;
+    color: #ffffff;
+}
+
+.product-item.is-hidden {
+    display: none;
 }
 
 .view-all-button {
@@ -240,6 +303,19 @@ html {
     border-radius: 4px;
 }
 
+.blog-search-input {
+    border-radius: 10px;
+    border: 1px solid #d8dee9;
+    padding: 12px;
+}
+
+.blog-search-result {
+    color: #52606d;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 700;
+}
+
 .contact-us-section {
     background-color: #222b36;
 }
@@ -313,5 +389,123 @@ html {
     font-family: "Roboto";
     font-size: 16px;
     font-weight: 400;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #1754a1;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+    transform: translateY(8px);
+    z-index: 1050;
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    background-color: #0f3f7b;
+}
+
+body.theme-dark {
+    --page-bg: #0f1722;
+    --surface-bg: #152130;
+    --text-main: #e5edf5;
+    --muted-text: #b6c3d1;
+}
+
+body.theme-dark .navbar {
+    background-color: #0f1722 !important;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.theme-dark #navItem1,
+body.theme-dark #navItem2,
+body.theme-dark #navItem3,
+body.theme-dark #navItem4 {
+    color: #d7e2ee;
+}
+
+body.theme-dark .vr-kit-section {
+    background-color: #111c2b;
+}
+
+body.theme-dark .vr-kit-card-title,
+body.theme-dark .products-section-heading,
+body.theme-dark .vr-features-section-heading,
+body.theme-dark .trending-blogs-section-heading,
+body.theme-dark .optics-and-controllers-section-heading,
+body.theme-dark .vr-features-card-title,
+body.theme-dark .trending-blogs-card-description {
+    color: #e5edf5;
+}
+
+body.theme-dark .vr-features-card-description,
+body.theme-dark .optics-and-controllers-section-description,
+body.theme-dark .blog-search-result {
+    color: #b6c3d1;
+}
+
+body.theme-dark .shadow {
+    background-color: #152130;
+    border-radius: 8px;
+}
+
+body.theme-dark .filter-chip {
+    background-color: #152130;
+    color: #d7e2ee;
+    border-color: #2d3c4d;
+}
+
+body.theme-dark .filter-chip.active {
+    background-color: #2d7eea;
+    border-color: #2d7eea;
+    color: #ffffff;
+}
+
+body.theme-dark .blog-search-input {
+    background-color: #111c2b;
+    border-color: #2d3c4d;
+    color: #e5edf5;
+}
+
+@media (max-width: 767px) {
+    .filter-toolbar {
+        gap: 8px;
+    }
+
+    .filter-chip {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+
+    .back-to-top-btn {
+        right: 14px;
+        bottom: 16px;
+    }
 }
 
